@@ -5,32 +5,32 @@ require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("greet.proto", :syntax => :proto3) do
-    add_message "test.HelloRequest" do
+    add_message "greet.HelloRequest" do
       optional :name, :string, 1
     end
-    add_message "test.HelloReply" do
+    add_message "greet.HelloReply" do
       optional :message, :string, 1
     end
-    add_message "test.HiRequest" do
+    add_message "greet.HiRequest" do
       optional :car, :string, 1
     end
-    add_message "test.HiReply" do
+    add_message "greet.HiReply" do
       optional :message, :string, 1
     end
-    add_message "test.NumRequest" do
+    add_message "greet.NumRequest" do
       optional :message, :float, 1
     end
-    add_message "test.NumberResponse" do
+    add_message "greet.NumberResponse" do
       optional :message, :float, 1
     end
   end
 end
 
-module Test
-  HelloRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("test.HelloRequest").msgclass
-  HelloReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("test.HelloReply").msgclass
-  HiRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("test.HiRequest").msgclass
-  HiReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("test.HiReply").msgclass
-  NumRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("test.NumRequest").msgclass
-  NumberResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("test.NumberResponse").msgclass
+module Greet
+  HelloRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.HelloRequest").msgclass
+  HelloReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.HelloReply").msgclass
+  HiRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.HiRequest").msgclass
+  HiReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.HiReply").msgclass
+  NumRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.NumRequest").msgclass
+  NumberResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.NumberResponse").msgclass
 end
