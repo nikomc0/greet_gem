@@ -4,7 +4,7 @@
 require 'grpc'
 require 'greet_pb'
 
-module Test
+module Greet
   module Greeter
     # The greeter service definition.
     class Service
