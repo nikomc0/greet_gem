@@ -11,6 +11,8 @@ service Greeter {
 
   // return a number.
   rpc Number (NumRequest) returns (NumberResponse) {}
+
+  rpc Authenticate (AuthenticationRequest) returns (AuthenticationResponse) {}
 }
 
 // The request message containing the user's name.
@@ -37,4 +39,14 @@ message NumRequest {
 
 message NumberResponse {
   float message = 1;
+}
+
+message AuthenticationRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message AuthenticationResponse {
+  string token = 1;
+  string refresh_token = 2;
 }
