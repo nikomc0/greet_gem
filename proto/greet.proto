@@ -12,7 +12,7 @@ service Greeter {
   // return a number.
   rpc Number (NumRequest) returns (NumberResponse) {}
 
-  rpc Authentication (AuthenticateRequest) returns (AuthenticateResponse) {}
+  rpc Authenticate (AuthenticateRequest) returns (AuthenticateResponse) {}
 }
 
 // The request message containing the user's name.
