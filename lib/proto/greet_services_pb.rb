@@ -21,7 +21,11 @@ module Greet
       rpc :SayHi, ::Greet::HelloRequest, ::Greet::HelloReply
       # return a number.
       rpc :Number, ::Greet::NumRequest, ::Greet::NumberResponse
+<<<<<<< HEAD
       rpc :Authentication, ::Greet::AuthenticateRequest, ::Greet::AuthenticateResponse
+=======
+      rpc :Authenticate, ::Greet::AuthenticationRequest, ::Greet::AuthenticationResponse
+>>>>>>> ae165ea588013d5a0a94130e357c0e1fc2b8ad11
     end
 
     Stub = Service.rpc_stub_class

@@ -23,11 +23,19 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "greet.NumberResponse" do
       optional :message, :float, 1
     end
+<<<<<<< HEAD
     add_message "greet.AuthenticateRequest" do
       optional :username, :string, 1
       optional :password, :string, 2
     end
     add_message "greet.AuthenticateResponse" do
+=======
+    add_message "greet.AuthenticationRequest" do
+      optional :username, :string, 1
+      optional :password, :string, 2
+    end
+    add_message "greet.AuthenticationResponse" do
+>>>>>>> ae165ea588013d5a0a94130e357c0e1fc2b8ad11
       optional :token, :string, 1
       optional :refresh_token, :string, 2
     end
@@ -41,6 +49,11 @@ module Greet
   HiReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.HiReply").msgclass
   NumRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.NumRequest").msgclass
   NumberResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.NumberResponse").msgclass
+<<<<<<< HEAD
   AuthenticateRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.AuthenticateRequest").msgclass
   AuthenticateResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.AuthenticateResponse").msgclass
+=======
+  AuthenticationRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.AuthenticationRequest").msgclass
+  AuthenticationResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("greet.AuthenticationResponse").msgclass
+>>>>>>> ae165ea588013d5a0a94130e357c0e1fc2b8ad11
 end
