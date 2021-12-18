@@ -22,7 +22,7 @@ module Greet
       # return a number.
       rpc :Number, ::Greet::NumRequest, ::Greet::NumberResponse
 
-      rpc :Authentication, ::Greet::AuthenticateRequest, ::Greet::AuthenticateResponse
+      rpc :Authenticate, ::Greet::AuthenticateRequest, ::Greet::AuthenticateResponse
     end
 
     Stub = Service.rpc_stub_class
