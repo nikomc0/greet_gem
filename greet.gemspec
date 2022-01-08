@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib", "lib/proto", "lib/greet"]
 
-  spec.add_dependency "grpc", github: 'grpc/grpc', submodules: true
+  spec.add_dependency "grpc"
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
 end
